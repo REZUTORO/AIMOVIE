@@ -4,8 +4,7 @@ import cv2
 import numpy as np
 import mysql.connector
 
-app = Flask(__name__)
-
+app = Flask(__name__, template_folder='site')
 UPLOAD_FOLDER = 'uploads'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
@@ -17,6 +16,7 @@ db_config = {
     'password': 'admin',
     'database': 'AIMOVIE'
 }
+
 
 @app.route('/upload', methods=['POST'])
 def upload_image():
