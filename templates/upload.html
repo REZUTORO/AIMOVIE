@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Upload Cat Photos</title>
+</head>
+<body>
+  <h1>Upload Photos</h1>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="files[]" multiple>
+    <input type="submit" value="Upload">
+  </form>
+  <hr>
+  <h2>Manage Uploaded Photos</h2>
+  <h3>Cat Photos</h3>
+  <ul>
+    {% for file in cat_files %}
+    <li>{{ file }}</li>
+    {% endfor %}
+  </ul>
+  <h3>Not Cat Photos</h3>
+  <ul>
+    {% for file in not_cat_files %}
+    <li>{{ file }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

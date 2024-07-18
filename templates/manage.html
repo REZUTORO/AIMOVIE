@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Manage Photos</title>
+</head>
+<body>
+  <h1>Manage Uploaded Photos ({{ type }})</h1>
+  <ul>
+    {% for file in files %}
+    <li>
+      <a href="{{ url_for('uploaded_file', folder=folder, filename=file) }}" target="_blank">{{ file }}</a>
+      <a href="{{ url_for('delete_file', folder=folder, filename=file) }}">Delete</a>
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

@@ -1,4 +1,1 @@
 flask
-mysql-connector-python
-opencv-python-headless
-gunicorn
