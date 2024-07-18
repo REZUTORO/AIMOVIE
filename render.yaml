@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: my-flask-app
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: "python manage_photos.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
